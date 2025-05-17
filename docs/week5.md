@@ -6,3 +6,4 @@
 - Confirmed tables: `basket_items`, `products`, `reviews`, `users`.
 - Enabled public accessibility and added security group rule (TCP, 5432, My IP).
 - Commands: `aws rds create-db-instance-read-replica`, `psql`, `\dt`.
+- Screenshot: [RDS_replica_psql_screenshot.png](week5/RDS_replica_psql_screenshot.png)
