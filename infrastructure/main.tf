@@ -4,12 +4,12 @@ resource "aws_instance" "grocerymate_ec2" {
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
   subnet_id     = var.subnet_id
   tags = {
-    Name = "grocerymate-ec2"
+    Name = "grocerymate-ec2-tf"
   }
 }
 
 resource "aws_security_group" "ec2_sg" {
-  name        = "grocerymate-ec2-sg"
+  name        = "grocerymate-ec2-sg-tf"
   description = "Allow SSH and HTTP for EC2"
   vpc_id      = var.vpc_id
   ingress {

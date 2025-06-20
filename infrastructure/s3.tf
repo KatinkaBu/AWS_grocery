@@ -1,7 +1,7 @@
 resource "aws_s3_bucket" "avatars" {
-  bucket = "grocerymate-avatars-${random_string.suffix.result}"
+  bucket = "grocerymate-avatars-tf-${random_string.suffix.result}"
   tags = {
-    Name        = "grocerymate-avatars"
+    Name        = "grocerymate-avatars-tf"
     Environment = "Dev"
   }
 }
