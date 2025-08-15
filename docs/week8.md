@@ -107,7 +107,7 @@ This document covers the Week 8 Bonus project for Masterschool, focusing on AWS 
 
 7. Click Create Role.
 
-##MFA Enforcement Explanation:
+## MFA Enforcement Explanation:
 
 Purpose: Restricts S3 access to MFA-authenticated users or entities, enhancing security.
 Mechanism: The aws:MultiFactorAuthPresent condition:
@@ -119,7 +119,7 @@ Deny blocks all S3 actions if MFA is absent (false).
 Security Benefit: MFA requires a second factor (e.g., phone app), reducing unauthorized access risks.
 AWS Context: Aligns with IAM best practices for secure resource access.
 
-##Permission Restrictions:
+## Permission Restrictions:
 
 Couldn’t create the policy due to missing iam:CreatePolicy permissions (no Create Policy button).
 Documented steps as per task requirements.
