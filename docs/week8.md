@@ -93,7 +93,7 @@ This document covers the Week 8 Bonus project for Masterschool, focusing on AWS 
             }
         }
     ]
-}
+   }
 
 - Policy Name: MFAEnforcedS3Policy
 - Resource: Uses grocerymate-logs-kb (same bucket as Task 1 and 2).
