@@ -5,3 +5,5 @@ frontend/src/config.js~
 venv/
 .DS_Store
 backend/.env.bak
+week6/.terraform/
+.terraform/
