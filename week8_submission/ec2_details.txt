@@ -1,0 +1,11 @@
+[
+    [
+        "i-0d64dad897d18f619",
+        "running",
+        "35.159.122.88",
+        [
+            "grocerymate-ec2-tf"
+        ],
+        "arn:aws:iam::971422704696:instance-profile/GrocerymateEC2S3Profile"
+    ]
+]
