@@ -43,3 +43,83 @@ This document covers the Week 8 Bonus project for Masterschool, focusing on AWS 
 ## Submission
 - Uploaded screenshots and CLI outputs to Masterschool.
 - Folder: `~/AWS_grocery/week8_submission`
+
+
+
+## Advanced Task: MFA Enforcement IAM Role
+
+**Task Description**: Create an IAM role with a policy that restricts access to AWS resources (e.g., S3) unless MFA is enabled. Due to permission restrictions (no "Create Policy" button), I’ve documented the steps and explained MFA enforcement.
+
+**Steps**:
+1. Go to IAM Console > Roles > **Create Role**.
+2. Select **AWS Service: EC2** as the trusted entity. Trust policy:
+   ```json
+   {
+       "Version": "2012-10-17",
+       "Statement": [
+           {
+               "Effect": "Allow",
+               "Action": "sts:AssumeRole",
+               "Principal": {
+                   "Service": "ec2.amazonaws.com"
+               }
+           }
+       ]
+   }
+3. On Add Permissions, click Create Policy (unavailable in my environment).
+4. In the JSON tab, add the MFA enforcement policy:
+   ```json
+   {
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "s3:ListBucket",
+            "Resource": "arn:aws:s3:::grocerymate-logs-kb",
+            "Condition": {
+                "Bool": {
+                    "aws:MultiFactorAuthPresent": "true"
+                }
+            }
+        },
+        {
+            "Effect": "Deny",
+            "Action": "s3:*",
+            "Resource": "*",
+            "Condition": {
+                "BoolIfExists": {
+                    "aws:MultiFactorAuthPresent": "false"
+                }
+            }
+        }
+    ]
+   }
+
+- Policy Name: MFAEnforcedS3Policy
+- Resource: Uses grocerymate-logs-kb (same bucket as Task 1 and 2).
+
+5. Attach MFAEnforcedS3Policy to the role, remove other policies.
+   
+6. Name the role: MFAEnforcedS3AccessRole.
+    - Description: “Grants S3 read access to EC2 instances, only with MFA.”
+    - Tags (optional): Key: Purpose, Value: MFAEnforcement.
+
+
+7. Click Create Role.
+
+## MFA Enforcement Explanation:
+
+Purpose: Restricts S3 access to MFA-authenticated users or entities, enhancing security.
+Mechanism: The aws:MultiFactorAuthPresent condition:
+
+Allow permits s3:ListBucket only if MFA is enabled (true).
+Deny blocks all S3 actions if MFA is absent (false).
+
+
+Security Benefit: MFA requires a second factor (e.g., phone app), reducing unauthorized access risks.
+AWS Context: Aligns with IAM best practices for secure resource access.
+
+## Permission Restrictions:
+
+Couldn’t create the policy due to missing iam:CreatePolicy permissions (no Create Policy button).
+Documented steps as per task requirements.
