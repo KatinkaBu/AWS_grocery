@@ -7,6 +7,40 @@ Welcome to my AWS Grocery project! This repo documents my work deploying the Gro
 - **AWS Services**: S3 for storage, IAM for authentication, EC2 for instances, RDS for databases, and Terraform for deployment (tried HCP Terraform but documented theoretically as it didn’t work).
 - **Status**: Completed Weeks 1-9 with a focus on AWS deployment and repo cleanup.
 
+flowchart LR
+  %% ===== Outside =====
+  user([User / Browser])
+
+  %% ===== AWS Cloud =====
+  subgraph AWS_Cloud[AWS Cloud (eu-central-1)]
+    ALB[Application Load Balancer]
+    EC2[EC2 Instance<br/>(Docker: Flask App)]
+    RDS[(Amazon RDS<br/>(PostgreSQL))]
+    S3[(Amazon S3<br/>(avatars & logs))]
+    ECR[(Amazon ECR<br/>(container image))]
+    IAM[[IAM Roles & Policies]]
+  end
+
+  %% ===== IaC =====
+  TF[[Terraform (IaC)]]
+
+  %% ===== Flows =====
+  user -->|HTTPS| ALB
+  ALB -->|routes traffic| EC2
+
+  EC2 <--> |read/write| RDS
+  EC2 <--> |upload/read| S3
+
+  ECR -->|pull image| EC2
+  IAM -->|assume role| EC2
+  IAM -->|access policy| S3
+
+  TF -->|provisions| ALB
+  TF -->|provisions| EC2
+  TF -->|provisions| RDS
+  TF -->|provisions| S3
+  TF -->|provisions| IAM
+
 ## Project Structure 🌳
 - `docs/`: Project documentation and references (e.g., weekly summaries like `week1.md` to `week9.md`, `trust_policy.json`, `s3_policy.json`).
 - `week5/`, `week6/`, `week7/`, `week8_submission/`: Weekly folders with deployment code and configs.
