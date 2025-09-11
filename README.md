@@ -14,6 +14,11 @@ User requests enter through an Application Load Balancer (HTTP 80), which routes
 
 ![Architecture Diagram](./AWS_Grocery_Mate_general_overview.jpg)
 
+## AWS Presentation 🌿
+To give a clearer picture of the architecture and deployment, I also recorded a short video presentation. It walks through the diagram above, explains the AWS services I used, and highlights key learnings from the project.
+
+- [Link to Presentation] (Add YouTube link once created!)
+
 ## Project Structure 🌳
 - `docs/`: Project documentation and references (e.g., weekly summaries like `week1.md` to `week9.md`, `trust_policy.json`, `s3_policy.json`).
 - `week5/`, `week6/`, `week7/`, `week8_submission/`: Weekly folders with deployment code and configs.
@@ -47,10 +52,6 @@ User requests enter through an Application Load Balancer (HTTP 80), which routes
 - **Week 8**: Deepened AWS Auth with IAM, created IAM role, read AWS SSO Q&A, internalized CLI basics, passed quiz, left MFA enforcement open.
 - **Week 9**: Cleaned up GitHub repository, finalized README, evaluated and optimized AWS costs, prepared architecture presentation, ensured full understanding of all project parts.
 - **Week 10**: Set up a CloudWatch Alarm for EC2 CPU usage, verified triggering and notification setup, finalized repo for submission.
-
-## AWS Presentation 🌿
-Check out my presentation outlining the architecture and AWS services used:
-- [Link to Presentation] (Add YouTube link once created!)
 
 ## Contributions 🪴
 This repo contains my AWS deployment work for the GroceryMate app. Suggestions are welcome – open an issue!
