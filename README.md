@@ -1,5 +1,7 @@
 # AWS Grocery Project 🌱
 
+🦎 [Watch my Presentation](YOUTUBE_LINK) 🦎
+
 Welcome to my AWS Grocery project! This repo documents my work deploying the GroceryMate e-commerce app on AWS as part of the Masterschools program. I forked the original app by Alejandro Roman Ibanez and focused on AWS setup using Terraform for infrastructure as code. 
 
 ## Overview 🍃
@@ -13,11 +15,6 @@ This architecture shows the MVP deployment of the GroceryMate app on AWS.
 User requests enter through an Application Load Balancer (HTTP 80), which routes traffic to an EC2 instance running the application (port 5000). The EC2 instance connects to an RDS database in a private subnet, stores/reads assets from S3, and pulls container images from ECR. IAM manages access, CloudWatch provides monitoring and alarms, and Terraform provisions all resources as code.
 
 ![Architecture Diagram](./AWS_Grocery_Mate_general_overview.jpg)
-
-## AWS Presentation 🌿
-To give a clearer picture of the architecture and deployment, I also recorded a short video presentation. It walks through the diagram above, explains the AWS services I used, and highlights key learnings from the project.
-
-🟢 🟢 🟢 [Link to Presentation] (Add YouTube link once created!)🟢 🟢 🟢
 
 ## Project Structure 🌳
 - `docs/`: Project documentation and references (e.g., weekly summaries like `week1.md` to `week9.md`, `trust_policy.json`, `s3_policy.json`).
