@@ -17,7 +17,7 @@ User requests enter through an Application Load Balancer (HTTP 80), which routes
 ## AWS Presentation 🌿
 To give a clearer picture of the architecture and deployment, I also recorded a short video presentation. It walks through the diagram above, explains the AWS services I used, and highlights key learnings from the project.
 
-- [Link to Presentation] (Add YouTube link once created!)
+🟢 🟢 🟢 [Link to Presentation] (Add YouTube link once created!)🟢 🟢 🟢
 
 ## Project Structure 🌳
 - `docs/`: Project documentation and references (e.g., weekly summaries like `week1.md` to `week9.md`, `trust_policy.json`, `s3_policy.json`).
