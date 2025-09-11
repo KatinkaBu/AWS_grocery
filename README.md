@@ -3,6 +3,9 @@
 Welcome to my AWS Grocery project! This repo documents my work deploying the GroceryMate e-commerce app on AWS as part of the Masterschools program. I forked the original app by Alejandro Roman Ibanez and focused on AWS setup using Terraform for infrastructure as code. 
 
 ## Overview 🍃
+
+![Architecture Diagram](./AWS_Grocery_Mate_general_overview.jpg)
+
 - **Purpose**: Deploy and manage the GroceryMate app on AWS using Terraform for infrastructure setup.
 - **AWS Services**: S3 for storage, IAM for authentication, EC2 for instances, RDS for databases, and Terraform for deployment (tried HCP Terraform but documented theoretically as it didn’t work).
 - **Status**: Completed Weeks 1-9 with a focus on AWS deployment and repo cleanup.
