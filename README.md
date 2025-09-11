@@ -1,6 +1,6 @@
 # AWS Grocery Project 🌱
 
-Welcome to my AWS Grocery project! This repo documents my work deploying the GroceryMate e-commerce app on AWS as part of the Masterschools program. I forked the original app by Alejandro Roman Ibanez and focused on AWS setup using Terraform for infrastructure as code. I've cleaned it up for Week 9 to share my progress! 
+Welcome to my AWS Grocery project! This repo documents my work deploying the GroceryMate e-commerce app on AWS as part of the Masterschools program. I forked the original app by Alejandro Roman Ibanez and focused on AWS setup using Terraform for infrastructure as code. 
 
 ## Overview 🍃
 - **Purpose**: Deploy and manage the GroceryMate app on AWS using Terraform for infrastructure setup.
