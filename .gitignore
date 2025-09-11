@@ -5,5 +5,17 @@ frontend/src/config.js~
 venv/
 .DS_Store
 backend/.env.bak
+
+# Terraform (sensibles Zeug niemals committen)
 week6/.terraform/
+infrastructure/.terraform/
 .terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+crash.log
+
+# Lokale Backups/Artefakte
+AWS_grocery_backup.zip
+*.zip
