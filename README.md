@@ -48,7 +48,7 @@ User requests enter through an Application Load Balancer (HTTP 80), which routes
 - **Week 7**: Deepened AWS S3, deployed S3 bucket with Terraform/CDK, uploaded files, adapted app for S3 avatars, completed Udemy Session 8, passed quiz, left Pre-Signed URLs open.
 - **Week 8**: Deepened AWS Auth with IAM, created IAM role, read AWS SSO Q&A, internalized CLI basics, passed quiz, left MFA enforcement open.
 - **Week 9**: Cleaned up GitHub repository, finalized README, evaluated and optimized AWS costs, prepared architecture presentation, ensured full understanding of all project parts.
-- **Week 10**: Set up a CloudWatch Alarm for EC2 CPU usage, verified triggering and notification setup, finalized repo for submission.
+- **Week 10**: Configured a basic CloudWatch Alarm on the EC2 instance to monitor CPU usage (threshold 70%). Added alert via SNS to email.
 
 ## Contributions 🪴
 This repo contains my AWS deployment work for the GroceryMate app. Suggestions are welcome – open an issue!
